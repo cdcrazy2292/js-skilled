@@ -27,7 +27,6 @@ Counter.prototype.add = function(arr) {
   arr.forEach(each => {
     this.sum += each;
     ++this.count;
-    console.log(this.sum);
   }, this);
 };
 
