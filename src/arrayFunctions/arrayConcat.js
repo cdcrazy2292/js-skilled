@@ -1,5 +1,5 @@
 /**
- * The concat method is used to method is used to
+ * The concat method is used to
  * merge 2 or more arrays. This method does not change the arrays
  * but instead returns a new one
  */
