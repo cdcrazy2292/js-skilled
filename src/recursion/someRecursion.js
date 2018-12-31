@@ -8,6 +8,12 @@ const someRecursive = (arr, callback) => {
   }
   condition = helper(arr, callback);
   return condition;
+
+  //==============================
+  //  Other implementation
+  // if (array.length === 0) return false;
+  // if (callback(array[0])) return true;
+  // return someRecursive(array.slice(1), callback);
 };
 
 module.exports = {
