@@ -6,4 +6,9 @@ describe("Testing that function flattens an array", function() {
     let result = testObj.flatten([1, [2, 3], 4]);
     chai.expect(result).to.have.members([1, 2, 3, 4]);
   });
+
+  it("should test [[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]", function() {
+    let result = testObj.flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]);
+    chai.expect(result).to.have.members([1, 2, 3]);
+  });
 });
