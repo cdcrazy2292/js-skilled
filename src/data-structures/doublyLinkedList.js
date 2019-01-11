@@ -116,6 +116,31 @@ class DoublyLinkedList {
     this.size++;
     return true;
   }
+
+  remove(index) {
+    if (index < 0 || index > this.size) return undefined;
+    if (index === 0) return this.shift();
+    if (index === this.size - 1) return this.pop();
+    let elementToRemove = this.get(index);
+    let prev = elementToRemove.previous;
+    let next = elementToRemove.next;
+    prev.next = next;
+    next.previous = prev;
+    elementToRemove.next = null;
+    elementToRemove.previous = null;
+    this.size--;
+    return elementToRemove;
+  }
+
+  print() {
+    let counter = 0;
+    let current = this.head;
+    while (counter < this.size) {
+      console.log(current.value);
+      current = current.next;
+      counter++;
+    }
+  }
 }
 
 module.exports = {

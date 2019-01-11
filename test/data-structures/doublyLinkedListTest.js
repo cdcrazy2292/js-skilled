@@ -113,4 +113,22 @@ describe("Testing doubly Linked Lists", function() {
     chai.expect(dll.get(2).previous.value).to.equal(2);
     chai.expect(dll.get(2).next.value).to.equal(3);
   });
+
+  it("should test that an element is removed correctly at the desired location", function() {
+    let dll = new testObj.DoublyLinkedList();
+    dll.push(0);
+    chai.expect(dll.remove(-1)).to.be.undefined;
+    chai.expect(dll.remove(3)).to.be.undefined;
+    chai.expect(dll.remove(0).value).to.equal(0);
+    dll.push(0);
+    dll.push(1);
+    dll.push(2);
+    dll.push(3);
+    dll.push(4);
+    dll.push(5);
+    chai.expect(dll.remove(5).value).to.equal(5);
+    chai.expect(dll.remove(2).value).to.equal(2);
+    chai.expect(dll.size).to.equal(4);
+    dll.print();
+  });
 });
