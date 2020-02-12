@@ -6,3 +6,6 @@ launch.json
 settings.json
 jsconfig.json
 .idea
+
+# Custom ignores
+bundle.js
